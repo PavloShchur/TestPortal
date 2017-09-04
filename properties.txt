@@ -1,0 +1,5 @@
+url = jdbc:mysql://localhost/task_manager
+driver = com.mysql.jdbc.Driver
+user = root
+password = auf253100vbnc45
+email = pavloshchur@gmail.com
