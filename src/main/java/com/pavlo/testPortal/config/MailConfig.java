@@ -24,6 +24,7 @@ public class MailConfig extends AbstractProperties {
         javaMailSender.setUsername(
                 abstractProperties.abstractPropertiesMethod().get("email"));
         javaMailSender.setPassword(abstractProperties.abstractPropertiesMethod().get("password"));
+        
 
         Properties properties = new Properties();
         properties = javaMailSender.getJavaMailProperties();
