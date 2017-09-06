@@ -2,13 +2,22 @@ package com.pavlo.testPortal.entity;
 
 import lombok.*;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
-public class Answer {
+@ToString(exclude = "descriptionOfAnswer")
+public class Answer extends AbstractEntity {
+
+    private String descriptionOfAnswer;
+
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private QuestionWithSingleAnswer questionWithSingleAnswer;
+
+    public Answer(String descriptionOfAnswer) {
+
+    }
 }
