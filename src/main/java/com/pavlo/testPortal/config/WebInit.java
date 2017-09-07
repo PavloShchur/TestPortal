@@ -8,18 +8,18 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
-public class WebInit implements WebApplicationInitializer {
+public class WebInit implements WebApplicationInitializer{
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
-
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.register(WebConfig.class);
         DispatcherServlet dispatcherServlet = new DispatcherServlet(context);
-        ServletRegistration.Dynamic registration = servletContext.
-                addServlet("dispatcherServlet", dispatcherServlet);
+        ServletRegistration.Dynamic registration =
+                servletContext.addServlet("dispatcherServlet",dispatcherServlet);
+
         registration.setLoadOnStartup(1);
         registration.addMapping("/");
-
     }
 }
+

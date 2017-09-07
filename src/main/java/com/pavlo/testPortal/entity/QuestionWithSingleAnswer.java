@@ -1,7 +1,7 @@
 package com.pavlo.testPortal.entity;
 
 
-import com.pavlo.testPortal.DAO.QuestionWithSingleAnswerDAO;
+import com.pavlo.testPortal.dao.QuestionWithSingleAnswerDAO;
 import lombok.*;
 
 import javax.persistence.*;
@@ -16,7 +16,7 @@ public class QuestionWithSingleAnswer extends AbstractEntity {
 
     private String descriptionOfQuestion;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY,
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY,
             mappedBy = "questionWithSingleAnswer")
     private Answer answer;
 

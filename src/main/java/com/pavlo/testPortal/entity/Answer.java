@@ -14,7 +14,7 @@ public class Answer extends AbstractEntity {
 
     private String descriptionOfAnswer;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private QuestionWithSingleAnswer questionWithSingleAnswer;
 
     public Answer(String descriptionOfAnswer) {

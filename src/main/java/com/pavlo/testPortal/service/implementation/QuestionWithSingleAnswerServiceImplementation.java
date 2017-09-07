@@ -1,6 +1,6 @@
 package com.pavlo.testPortal.service.implementation;
 
-import com.pavlo.testPortal.DAO.QuestionWithSingleAnswerDAO;
+import com.pavlo.testPortal.dao.QuestionWithSingleAnswerDAO;
 import com.pavlo.testPortal.entity.QuestionWithSingleAnswer;
 import com.pavlo.testPortal.service.QuestionWithSingleAnswerService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -10,7 +10,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.pavlo.testPortal")
+@ComponentScan("com.pavlo.testPortal.*")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Bean
@@ -26,12 +26,12 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry resourceHandlerRegistry) {
 
-        resourceHandlerRegistry.addResourceHandler("/css/**")
-                .addResourceLocations("/static/styles/");
-        resourceHandlerRegistry.addResourceHandler("/bootstrap/**")
-                .addResourceLocations("/static/styles/");
-        resourceHandlerRegistry.addResourceHandler("/js/**")
-                .addResourceLocations("/static/js/");
+//        resourceHandlerRegistry.addResourceHandler("/css/**")
+//                .addResourceLocations("/static/styles/");
+//        resourceHandlerRegistry.addResourceHandler("/bootstrap/**")
+//                .addResourceLocations("/static/styles/");
+//        resourceHandlerRegistry.addResourceHandler("/js/**")
+//                .addResourceLocations("/static/js/");
         resourceHandlerRegistry.addResourceHandler("/images/**")
                 .addResourceLocations("/static/images");
     }

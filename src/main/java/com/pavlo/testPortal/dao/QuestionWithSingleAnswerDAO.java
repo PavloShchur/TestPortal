@@ -1,4 +1,4 @@
-package com.pavlo.testPortal.DAO;
+package com.pavlo.testPortal.dao;
 
 import com.pavlo.testPortal.entity.QuestionWithSingleAnswer;
 import org.springframework.data.jpa.repository.JpaRepository;

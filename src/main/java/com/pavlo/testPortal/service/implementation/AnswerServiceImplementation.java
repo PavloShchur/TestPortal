@@ -1,6 +1,6 @@
 package com.pavlo.testPortal.service.implementation;
 
-import com.pavlo.testPortal.DAO.AnswerDAO;
+import com.pavlo.testPortal.dao.AnswerDAO;
 import com.pavlo.testPortal.entity.Answer;
 import com.pavlo.testPortal.service.AnswerService;
 import org.springframework.beans.factory.annotation.Autowired;
