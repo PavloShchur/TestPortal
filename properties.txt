@@ -1,4 +1,4 @@
-url = jdbc:mysql://localhost/task_manager?createDatabaseIfNotExist=true
+url = jdbc:mysql://localhost/testPortal?createDatabaseIfNotExist=true
 driver = com.mysql.jdbc.Driver
 user = root
 password = auf253100vbnc45

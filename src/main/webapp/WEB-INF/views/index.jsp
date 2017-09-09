@@ -6,5 +6,6 @@
 </head>
 <body>
         Index
+ <a href="getAllUsers">all users</a>
 </body>
 </html>

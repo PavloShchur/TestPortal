@@ -16,9 +16,11 @@ public class UserServiceImplementation implements UserService {
     private UserDAO userDAO;
 
     @Override
-    public void save(String name) {
-        User user = new User(name);
-        userDAO.save(user);
+    public void save(String name, String email) {
+        if (!name.isEmpty() && name != null) {
+            User user = User.builder().name(name).email(email).build();
+            userDAO.save(user);
+        }
     }
 
     @Override
