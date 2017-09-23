@@ -10,8 +10,8 @@
 
 <a href="/showAllUsers">show all users</a>
 
-<input type="text" id="name" placeholder="eeeee">
-<input type="text" id="email" placeholder="eeeee">
+<input type="text" id="name" placeholder="name">
+<input type="text" id="email" placeholder="email">
 <button id="send">send</button>
 
 <hr>

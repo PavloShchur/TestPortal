@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface AnswerService {
 
-    void save(String descriptionOfAnswer);
+    void save(String descriptionOfAnswer, int rankOfAnswer);
     void save(Answer answer);
     Answer findOne(int id);
     List<Answer> findAll();

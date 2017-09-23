@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class UserController {
@@ -14,15 +15,10 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @PatchMapping("/saveUser")
+    @PostMapping("/saveUser")
     public String saveUser() {
 
         return "redirect:/allUsers";
     }
 
-    @GetMapping("/getAllUsers")
-    public String getAllUsers(Model model) {
-        model.addAttribute("allUsers", userService.findAll());
-        return "userViews/allUsers";
-    }
 }

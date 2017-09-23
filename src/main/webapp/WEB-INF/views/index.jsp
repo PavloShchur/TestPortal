@@ -7,5 +7,6 @@
 <body>
         Index
  <a href="getAllUsers">all users</a>
+ <a href="getAllAnswers">all answers</a>
 </body>
 </html>

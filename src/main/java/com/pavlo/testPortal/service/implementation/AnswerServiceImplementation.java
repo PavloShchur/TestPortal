@@ -17,8 +17,8 @@ public class AnswerServiceImplementation implements AnswerService {
     AnswerDAO answerDAO;
 
     @Override
-    public void save(String descriptionOfAnswer) {
-        Answer answer = new Answer(descriptionOfAnswer);
+    public void save(String descriptionOfAnswer, int rankOfAnswer) {
+        Answer answer = new Answer(descriptionOfAnswer, rankOfAnswer);
         answerDAO.save(answer);
     }
 
