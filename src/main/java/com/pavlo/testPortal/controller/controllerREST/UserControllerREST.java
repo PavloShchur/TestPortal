@@ -16,9 +16,8 @@ public class UserControllerREST {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/sendUser")
-    public void send(@RequestBody User user) {
-        System.out.println(user);
+    @PostMapping("/saveUser")
+    public void saveUser(@RequestBody User user) {
         userService.save(user);
 
     }

@@ -22,7 +22,7 @@ $('#send').click(function () {
     var user = {name: imya, email: mulo};
     user = JSON.stringify(user);
     $.ajax({
-        url: '/sendUser',
+        url: '/saveUser',
         type: 'POST',
         data: user,
         contentType: 'application/json',
@@ -33,6 +33,7 @@ $('#send').click(function () {
         }
     });
 })
+
 //    $("button").click(function () {
 //        var id = $(this).attr("id");
 //        console.log(id);

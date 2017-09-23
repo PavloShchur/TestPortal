@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class UserController {
 
-    @Autowired
-    UserService userService;
-
-    @PostMapping("/saveUser")
-    public String saveUser() {
-
-        return "redirect:/allUsers";
-    }
+//    @Autowired
+//    UserService userService;
+//
+//    @PostMapping("/saveUser")
+//    public String saveUser() {
+//
+//        return "redirect:/allUsers";
+//    }
 
 }

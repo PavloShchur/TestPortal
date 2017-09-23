@@ -24,6 +24,6 @@
 <div id="convert"></div>
 
 
-<script src="/js/allUsers.js"></script>
+<script src="/huy/allUsers.js"></script>
 
 </body>
