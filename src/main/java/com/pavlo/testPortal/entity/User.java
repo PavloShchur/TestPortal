@@ -15,11 +15,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString()
-public class User {
+public class User extends AbstractEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
     private String name;
     private String email;
 

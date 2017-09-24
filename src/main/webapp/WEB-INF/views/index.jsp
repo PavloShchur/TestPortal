@@ -8,5 +8,6 @@
         Index
  <a href="getAllUsers">all users</a>
  <a href="getAllAnswers">all answers</a>
+ <a href="getAllBooks">all books</a>
 </body>
 </html>
