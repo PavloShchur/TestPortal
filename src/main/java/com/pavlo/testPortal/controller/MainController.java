@@ -1,6 +1,7 @@
 package com.pavlo.testPortal.controller;
 
 
+import com.pavlo.testPortal.DTO.BookAuthorDTO;
 import com.pavlo.testPortal.entity.Answer;
 import com.pavlo.testPortal.entity.Book;
 import com.pavlo.testPortal.service.AnswerService;
@@ -15,6 +16,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @Getter
@@ -50,14 +54,57 @@ public class MainController {
         return "answerViews/allAnswers";
     }
 
+//    @GetMapping("/getAllBooks")
+//    public String getAllAuthors(Model model) {
+//
+//        List<Book> books = bookService.fetchAuthor();
+//        model.addAttribute("books", books);
+//            model.addAttribute("emptyBook", new Book());
+//
+//        return "bookViews/allBooks";
+//    }
+
     @GetMapping("/getAllBooks")
     public String getAllAuthors(Model model) {
 
-            model.addAttribute("books", bookService.findAll());
-            model.addAttribute("emptyBook", new Book());
+        model.addAttribute("emptyBook", new Book());
+
+        List<Book> books = bookService.fetchAuthor();
+        System.out.println(books);
+
+        List<BookAuthorDTO> bookAuthorDTOS = new ArrayList<BookAuthorDTO>();
+
+            for (Book book : books) {
+
+                BookAuthorDTO dto = new BookAuthorDTO();
+
+                    dto.setIdBook(book.getId());
+                    dto.setIdAuthor(book.getAuthor().getId());
+                    dto.setTitleOfBook(book.getTitleOfBook());
+                    dto.setNameOfAuthor(book.getAuthor().getNameOfAuthor());
+                    dto.setNameOfAuthor(book.getAuthor().getSurnameOfAuthor());
+
+                    bookAuthorDTOS.add(dto);
+
+            }
+
+            model.addAttribute("bookAuthorDTO", bookAuthorDTOS);
 
         return "bookViews/allBooks";
     }
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

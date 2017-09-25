@@ -11,4 +11,6 @@ public interface BookService {
     void save(Book book);
     Book findOne(int id);
     List<Book> findAll();
+    List<Book> fetchAuthor();
+    List<Book> fetchAuthor(String maneOfAuthor);
 }

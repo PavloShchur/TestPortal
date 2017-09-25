@@ -21,9 +21,11 @@
 
         </form:form>
 
-        <c:forEach items="${books}" var="book">
+        <c:forEach items="${bookAuthorDTO}" var="dto">
 
-            ${book.author}
+            ${dto.titleOfBook}
+            ${dto.nameOfAuthor}
+            ${dto.surnameOfAuthor}
 
         </c:forEach>
 

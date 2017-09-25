@@ -23,7 +23,9 @@ public class BookController {
 
     @PostMapping(value = "saveBookWithAuthor")
     public String saveBookWithAuthor(@ModelAttribute("emptyBook")Book book) {
-        bookService.save(book);
+
+            bookService.save(book);
+
         return "redirect:/getAllBooks";
     }
 
@@ -31,6 +33,7 @@ public class BookController {
 
     @InitBinder
     public void bind(WebDataBinder webDataBinder) {
+
         webDataBinder.registerCustomEditor(Author.class, authorEditor);
     }
 }

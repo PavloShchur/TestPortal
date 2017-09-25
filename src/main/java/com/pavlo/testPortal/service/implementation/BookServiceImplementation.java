@@ -2,7 +2,6 @@ package com.pavlo.testPortal.service.implementation;
 
 import com.pavlo.testPortal.dao.BookDAO;
 import com.pavlo.testPortal.entity.Book;
-import com.pavlo.testPortal.entity.User;
 import com.pavlo.testPortal.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,5 +34,15 @@ public class BookServiceImplementation implements BookService {
     @Override
     public List<Book> findAll() {
         return bookDAO.findAll();
+    }
+
+    @Override
+    public List<Book> fetchAuthor() {
+        return bookDAO.fetchAuthor();
+    }
+
+    @Override
+    public List<Book> fetchAuthor(String nameOfAuthor) {
+        return bookDAO.fetchAuthor(nameOfAuthor);
     }
 }
