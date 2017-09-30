@@ -18,13 +18,11 @@ public class Book extends AbstractEntity {
 
     private String titleOfBook;
     private int priceOfBook;
-    private String nameOfAuthor;
-    private String surnameOfAuthor;
     private short yearOfPublishing;
     private String pathImage;
     private int quantity;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne()
     private Author author;
 
 

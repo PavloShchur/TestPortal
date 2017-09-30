@@ -11,27 +11,32 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+
 @Entity
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString(exclude = "book")
 public class Author extends AbstractEntity {
 
     private String nameOfAuthor;
     private String surnameOfAuthor;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "author")
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "author")
     private Book book;
+
+    public Author(String nameOfAuthor, String surnameOfAuthor) {
+        this.nameOfAuthor = nameOfAuthor;
+        this.surnameOfAuthor = surnameOfAuthor;
+    }
+
+    public Author() {
+    }
+
+    public Author(String nameOfAuthor, String surnameOfAuthor, Book book) {
+        this.nameOfAuthor = nameOfAuthor;
+        this.surnameOfAuthor = surnameOfAuthor;
+        this.book = book;
+    }
 
     public Author(String nameOfAuthor) {
         this.nameOfAuthor = nameOfAuthor;
-    }
-
-    public Author(String nameOfAuthor, Book book) {
-        this.nameOfAuthor = nameOfAuthor;
-        this.book = book;
     }
 
     public String getNameOfAuthor() {
@@ -56,5 +61,14 @@ public class Author extends AbstractEntity {
 
     public void setBook(Book book) {
         this.book = book;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "nameOfAuthor='" + nameOfAuthor + '\'' +
+                ", surnameOfAuthor='" + surnameOfAuthor + '\'' +
+                ", book=" + book +
+                '}';
     }
 }

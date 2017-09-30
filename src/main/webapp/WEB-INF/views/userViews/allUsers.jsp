@@ -1,3 +1,4 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
 <%@include file="../templates/head.jsp" %>
 <body>
 <h1>${xxx}</h1>
@@ -10,13 +11,13 @@
 
 <a href="/showAllUsers">show all users</a>
 
+<spring:errors path="name"/>
 <input type="text" id="name" placeholder="name">
 <input type="text" id="email" placeholder="email">
 <button id="send">send</button>
 
 <hr>
 <a href="/toMapUserWithCar"> toMapUserWithCar</a>
-
 <hr>
 
 
