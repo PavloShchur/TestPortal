@@ -16,11 +16,6 @@
 <input type="text" id="email" placeholder="email">
 <button id="send">send</button>
 
-<hr>
-<a href="/toMapUserWithCar"> toMapUserWithCar</a>
-<hr>
-
-
 <button id="show">show</button>
 <div id="convert"></div>
 

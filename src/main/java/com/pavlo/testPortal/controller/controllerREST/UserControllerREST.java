@@ -32,6 +32,7 @@ public class UserControllerREST {
 
     @GetMapping("/show")
     public List<User> show() {
+
         return userService.findAll();
     }
 

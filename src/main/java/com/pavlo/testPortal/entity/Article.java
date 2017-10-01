@@ -13,7 +13,7 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor()
 @ToString(exclude = "sphereOfIT")
 public class Article extends AbstractEntity {
 
@@ -23,5 +23,8 @@ public class Article extends AbstractEntity {
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private SphereOfIT sphereOfIT;
 
+    public Article(String titleOfArticle) {
+        this.titleOfArticle = titleOfArticle;
+    }
 }
 

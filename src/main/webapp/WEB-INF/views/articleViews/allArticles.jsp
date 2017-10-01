@@ -4,19 +4,19 @@
 <html>
 <head>
 
-    <title>All Answers</title>
+    <title>All Articles</title>
 
 </head>
 <body>
 
-<input type="text" id="descriptionOfAnswer" placeholder="descriptionOfAnswer">
+<input type="text" id="titleOfArticle" placeholder="titleOfArticle">
 <button id="send">send</button>
 
 <button id="show">show</button>
 <div id="convert"></div>
 
 
-<script src="/answerViews/allAnswers.js"></script>
+<script src="/articleViews/allArticles.js"></script>
 
 
 </body>

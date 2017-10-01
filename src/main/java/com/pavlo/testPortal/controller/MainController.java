@@ -52,15 +52,11 @@ public class MainController {
         return "answerViews/allAnswers";
     }
 
-//    @GetMapping("/getAllBooks")
-//    public String getAllAuthors(Model model) {
-//
-//        List<Book> books = bookService.fetchAuthor();
-//        model.addAttribute("books", books);
-//            model.addAttribute("emptyBook", new Book());
-//
-//        return "bookViews/allBooks";
-//    }
+    @GetMapping("/getAllArticles")
+    public String getAllArticles(Model model) {
+
+        return "articleViews/allArticles";
+    }
 
     @GetMapping("/getAllBooks")
     public String getAllAuthors(Model model) {
