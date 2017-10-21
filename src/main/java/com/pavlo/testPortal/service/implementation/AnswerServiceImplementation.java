@@ -18,22 +18,45 @@ public class AnswerServiceImplementation implements AnswerService {
 
     @Override
     public void save(String descriptionOfAnswer, int rankOfAnswer) {
+
         Answer answer = new Answer(descriptionOfAnswer, rankOfAnswer);
+
         answerDAO.save(answer);
+
     }
 
     @Override
     public void save(Answer answer) {
+
         answerDAO.save(answer);
+
     }
 
     @Override
     public Answer findOne(int id) {
+
         return answerDAO.findOne(id);
+
     }
 
     @Override
     public List<Answer> findAll() {
+
         return answerDAO.findAll();
+
+    }
+
+    @Override
+    public void delete(int id) {
+
+        answerDAO.delete(answerDAO.findOne(id));
+
+    }
+
+    @Override
+    public void deleteAll() {
+        
+        answerDAO.deleteAll();
+
     }
 }
