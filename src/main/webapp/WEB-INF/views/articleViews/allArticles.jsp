@@ -12,7 +12,7 @@
 <input type="text" id="titleOfArticle" placeholder="titleOfArticle">
 <button id="send">send</button>
 
-<button id="show">show</button>
+<button id="showArticle">show</button>
 <div id="convert"></div>
 
 

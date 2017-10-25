@@ -55,7 +55,7 @@ public class AnswerServiceImplementation implements AnswerService {
 
     @Override
     public void deleteAll() {
-        
+
         answerDAO.deleteAll();
 
     }

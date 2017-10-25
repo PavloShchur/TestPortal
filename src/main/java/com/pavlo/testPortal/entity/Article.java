@@ -13,7 +13,7 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor()
+@AllArgsConstructor
 @ToString(exclude = "sphereOfIT")
 public class Article extends AbstractEntity {
 

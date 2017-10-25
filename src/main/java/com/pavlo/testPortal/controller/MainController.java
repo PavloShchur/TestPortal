@@ -2,11 +2,9 @@ package com.pavlo.testPortal.controller;
 
 import com.pavlo.testPortal.DTO.BookAuthorDTO;
 import com.pavlo.testPortal.entity.Answer;
+import com.pavlo.testPortal.entity.Article;
 import com.pavlo.testPortal.entity.Book;
-import com.pavlo.testPortal.service.AnswerService;
-import com.pavlo.testPortal.service.AuthorService;
-import com.pavlo.testPortal.service.BookService;
-import com.pavlo.testPortal.service.UserService;
+import com.pavlo.testPortal.service.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +26,9 @@ public class MainController {
     @Autowired
     AnswerService answerService;
 
+    @Autowired
+    ArticleService articleService;
+
 
     private AuthorService authorService;
     private BookService bookService;
@@ -41,7 +42,9 @@ public class MainController {
 
     @GetMapping("/getAllUsers")
     public String getAllUsers(Model model) {
+
         model.addAttribute("allUsers", userService.findAll());
+
         return "userViews/allUsers";
     }
 
@@ -55,7 +58,12 @@ public class MainController {
     @GetMapping("/getAllArticles")
     public String getAllArticles(Model model) {
 
+        model.addAttribute("allArticles", articleService.findAll());
+
+        model.addAttribute("emptyArticle", new Article());
+
         return "articleViews/allArticles";
+
     }
 
     @GetMapping("/getAllBooks")
@@ -76,9 +84,7 @@ public class MainController {
             dto.setIdAuthor(book.getAuthor().getId());
             dto.setTitleOfBook(book.getTitleOfBook());
             dto.setNameOfAuthor(book.getAuthor().getNameOfAuthor());
-            System.out.println("dto 83 = " + dto);
             dto.setSurnameOfAuthor(book.getAuthor().getSurnameOfAuthor());
-            System.out.println("dto 85 = " + dto);
 
             bookAuthorDTOS.add(dto);
 

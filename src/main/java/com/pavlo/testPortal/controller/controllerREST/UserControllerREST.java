@@ -22,9 +22,13 @@ public class UserControllerREST {
 
     @PostMapping("/saveUser")
     public String saveUser(@RequestBody @Valid User user, BindingResult bindingResult) {
+
         if (bindingResult.hasErrors()) {
+
         } else {
+
             userService.save(user);
+
         }
 
         return null;
@@ -34,10 +38,13 @@ public class UserControllerREST {
     public List<User> show() {
 
         return userService.findAll();
+
     }
 
     @InitBinder
     public void bind(WebDataBinder webDataBinder) {
+
         webDataBinder.addValidators(userValidator);
+
     }
 }

@@ -1,7 +1,11 @@
 $('#send').click(function () {
+
     var title = $('#titleOfArticle').val();
+
     var article = {titleOfArticle: title};
+
     article = JSON.stringify(article);
+
     $.ajax({
         url: '/saveArticle',
         type: 'POST',
@@ -16,15 +20,26 @@ $('#send').click(function () {
 })
 
 
-$("#show").click(function () {
+$("#showArticle").click(function () {
+
+    console.log('showArticle');
+
     $("#convert").empty();
     $.ajax({
-        url: '/show',
+        url: '/showArticle',
         type: 'GET',
         success: function (articlesList) {
             for (let currentArticle of articlesList) {
-                $('#convert').append($('<div/>', {text: currentArticle.descriptionOfAnswer}));
+                $('#convert').append($('<div/>',
+                    {text: currentArticle.descriptionOfAnswer}));
+
+                console.log('currentArticle.descriptionOfAnswer = '
+                    + currentArticle.descriptionOfAnswer);
+
             }
+
+            console.log('success');
+
         },
         error: function (err) {
             alert(err);

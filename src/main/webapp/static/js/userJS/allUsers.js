@@ -34,24 +34,3 @@ $('#send').click(function () {
     });
 })
 
-//    $("button").click(function () {
-//        var id = $(this).attr("id");
-//        console.log(id);
-//
-//        $.ajax({
-//            url : "/send",
-//            type : 'get',
-////            data : JSON.stringify(id),
-//            data : id,
-////            contentType: 'application/json',
-//            contentType: 'text/plain',
-//            success:function (res) {
-//                console.log(res);
-//            },
-//            error : function () {
-//                console.log("NO!");
-//            }
-//
-//        });
-//
-//    })
